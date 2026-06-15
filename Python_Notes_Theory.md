@@ -1,4 +1,4 @@
-# Notes - Coding
+# Notes - Python - Theory
 
 # **1) Explain the Global Interpreter Lock (GIL) in Python?**
 
