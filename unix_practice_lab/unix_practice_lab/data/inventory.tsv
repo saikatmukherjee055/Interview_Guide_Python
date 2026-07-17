@@ -1,0 +1,11 @@
+sku	item	category	stock	price	warehouse
+P001	Laptop	Electronics	25	65000	Warehouse-A
+P002	Mouse	Accessories	150	900	Warehouse-B
+P003	Keyboard	Accessories	85	1800	Warehouse-B
+P004	Monitor	Electronics	40	12000	Warehouse-A
+P005	Router	Networking	18	6500	Warehouse-C
+P006	Server	Networking	4	180000	Warehouse-C
+P007	Printer	Electronics	12	24000	Warehouse-A
+P008	USB Cable	Accessories	300	350	Warehouse-B
+P009	Webcam	Accessories	0	3200	Warehouse-B
+P010	Switch	Networking	9	15000	Warehouse-C

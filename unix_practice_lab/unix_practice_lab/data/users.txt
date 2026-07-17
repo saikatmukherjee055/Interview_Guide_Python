@@ -1,0 +1,8 @@
+root:x:0:0:root:/root:/bin/bash
+alice:x:1001:1001:Alice Roy:/home/alice:/bin/bash
+bob:x:1002:1002:Bob Sen:/home/bob:/bin/zsh
+carol:x:1003:1003:Carol Das:/home/carol:/bin/bash
+dave:x:1004:1004:Dave Khan:/home/dave:/usr/sbin/nologin
+eve:x:1005:1005:Eve Nair:/home/eve:/bin/bash
+frank:x:1006:1006:Frank Iyer:/home/frank:/bin/fish
+guest:x:65534:65534:Guest User:/nonexistent:/usr/sbin/nologin

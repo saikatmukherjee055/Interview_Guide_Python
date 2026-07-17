@@ -1,0 +1,21 @@
+id,name,department,role,salary,city,join_date,status
+101,Aarav Sharma,Engineering,Senior Developer,95000,Delhi,2020-03-15,active
+102,Ishita Sen,HR,HR Manager,72000,Kolkata,2019-07-01,active
+103,Rohan Mehta,Sales,Sales Executive,58000,Mumbai,2022-01-10,active
+104,Meera Iyer,Engineering,Data Engineer,88000,Bengaluru,2021-06-21,active
+105,Kabir Khan,Finance,Accountant,65000,Delhi,2018-11-30,inactive
+106,Ananya Das,Marketing,SEO Specialist,61000,Kolkata,2023-02-14,active
+107,Vikram Rao,Engineering,DevOps Engineer,92000,Hyderabad,2020-09-18,active
+108,Nisha Patel,Sales,Sales Manager,83000,Ahmedabad,2017-04-09,active
+109,Arjun Nair,Support,Support Engineer,54000,Kochi,2022-08-12,active
+110,Priya Bose,Finance,Financial Analyst,78000,Kolkata,2021-12-05,active
+111,Neel Joshi,Engineering,Junior Developer,52000,Pune,2024-01-08,active
+112,Sana Ali,Marketing,Content Writer,50000,Delhi,2023-07-19,active
+113,Rahul Gupta,Operations,Operations Lead,76000,Jaipur,2019-10-25,active
+114,Tania Roy,HR,Recruiter,56000,Kolkata,2022-05-16,inactive
+115,Aditya Kulkarni,Engineering,QA Engineer,69000,Pune,2021-03-03,active
+116,Pooja Reddy,Support,Support Manager,74000,Hyderabad,2018-06-27,active
+117,Manish Verma,Sales,Sales Executive,60000,Delhi,2023-11-11,active
+118,Riya Chatterjee,Engineering,Data Scientist,105000,Kolkata,2020-02-20,active
+119,Karan Malhotra,Operations,Logistics Coordinator,57000,Chandigarh,2024-04-01,active
+120,Sneha Pillai,Finance,Senior Accountant,82000,Kochi,2016-09-13,active

@@ -1,0 +1,6 @@
+Unix tools are powerful because each command performs one focused task.
+Pipelines combine small commands into larger workflows.
+Grep searches text, awk processes fields, and find locates filesystem objects.
+A careful administrator tests commands before using destructive options.
+Error messages should be redirected only when you understand the consequences.
+Regular expressions are shared by many Unix text-processing tools.

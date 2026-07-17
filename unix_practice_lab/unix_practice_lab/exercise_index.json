@@ -1,0 +1,842 @@
+[
+  {
+    "n": 1,
+    "section": "grep",
+    "title": "Find all ERROR lines",
+    "task": "Display every line containing `ERROR` in the application log.",
+    "cmd": "grep 'ERROR' data/app.log"
+  },
+  {
+    "n": 2,
+    "section": "grep",
+    "title": "Case-insensitive INFO search",
+    "task": "Display lines containing `info`, regardless of letter case.",
+    "cmd": "grep -i 'info' data/app.log"
+  },
+  {
+    "n": 3,
+    "section": "grep",
+    "title": "Show line numbers",
+    "task": "Find `WARN` lines and include their line numbers.",
+    "cmd": "grep -n 'WARN' data/app.log"
+  },
+  {
+    "n": 4,
+    "section": "grep",
+    "title": "Match several log levels",
+    "task": "Display lines containing either `ERROR` or `FATAL`.",
+    "cmd": "grep -E 'ERROR|FATAL' data/app.log"
+  },
+  {
+    "n": 5,
+    "section": "grep",
+    "title": "Count failed logins",
+    "task": "Count lines containing `Failed password` in the authentication log.",
+    "cmd": "grep -c 'Failed password' data/auth.log"
+  },
+  {
+    "n": 6,
+    "section": "grep",
+    "title": "Exclude INFO lines",
+    "task": "Display application-log lines that do not contain `INFO`.",
+    "cmd": "grep -v 'INFO' data/app.log"
+  },
+  {
+    "n": 7,
+    "section": "grep",
+    "title": "Match a whole word",
+    "task": "Find occurrences of the whole word `root` in the authentication log.",
+    "cmd": "grep -w 'root' data/auth.log"
+  },
+  {
+    "n": 8,
+    "section": "grep",
+    "title": "Match a line prefix",
+    "task": "Display access-log requests coming from IP address `192.168.1.10`.",
+    "cmd": "grep '^192\\.168\\.1\\.10 ' data/web_access.log"
+  },
+  {
+    "n": 9,
+    "section": "grep",
+    "title": "Find HTTP 4xx responses",
+    "task": "Display access-log lines whose response status is in the 400\u2013499 range.",
+    "cmd": "grep -E '\" 4[0-9]{2} ' data/web_access.log"
+  },
+  {
+    "n": 10,
+    "section": "grep",
+    "title": "Find GET or POST requests",
+    "task": "Display requests whose HTTP method is either GET or POST.",
+    "cmd": "grep -E '\"(GET|POST) ' data/web_access.log"
+  },
+  {
+    "n": 11,
+    "section": "grep",
+    "title": "Search recursively for TODO or FIXME",
+    "task": "Search the entire `projects` tree for unfinished-work markers.",
+    "cmd": "grep -RInE 'TODO|FIXME' projects"
+  },
+  {
+    "n": 12,
+    "section": "grep",
+    "title": "List files containing ERROR",
+    "task": "Print only the names of log files that contain `ERROR`.",
+    "cmd": "grep -rl 'ERROR' logs"
+  },
+  {
+    "n": 13,
+    "section": "grep",
+    "title": "List files without ERROR",
+    "task": "Print names of log files that contain no `ERROR` line.",
+    "cmd": "grep -rL 'ERROR' logs"
+  },
+  {
+    "n": 14,
+    "section": "grep",
+    "title": "Match an entire line",
+    "task": "Find lines in `words.txt` that are exactly lowercase `apple`.",
+    "cmd": "grep -x 'apple' data/words.txt"
+  },
+  {
+    "n": 15,
+    "section": "grep",
+    "title": "Count apple ignoring case",
+    "task": "Count lines equal to or containing `apple` regardless of case.",
+    "cmd": "grep -ic 'apple' data/words.txt"
+  },
+  {
+    "n": 16,
+    "section": "grep",
+    "title": "Names starting with A or R",
+    "task": "Display names beginning with uppercase A or R.",
+    "cmd": "grep -E '^[AR]' data/names.txt"
+  },
+  {
+    "n": 17,
+    "section": "grep",
+    "title": "Engineering employees",
+    "task": "Display employee records belonging to Engineering.",
+    "cmd": "grep ',Engineering,' data/employees.csv"
+  },
+  {
+    "n": 18,
+    "section": "grep",
+    "title": "Inactive employees",
+    "task": "Display employee records whose final CSV field is `inactive`.",
+    "cmd": "grep ',inactive$' data/employees.csv"
+  },
+  {
+    "n": 19,
+    "section": "grep",
+    "title": "Show context around FATAL",
+    "task": "Display the FATAL line together with one line before and one line after it.",
+    "cmd": "grep -B 1 -A 1 'FATAL' data/app.log"
+  },
+  {
+    "n": 20,
+    "section": "grep",
+    "title": "Extract only IP addresses",
+    "task": "Extract every IPv4-like address from the access log.",
+    "cmd": "grep -oE '([0-9]{1,3}\\.){3}[0-9]{1,3}' data/web_access.log"
+  },
+  {
+    "n": 21,
+    "section": "grep",
+    "title": "Count requests per IP",
+    "task": "Create a frequency table showing how many requests each IP sent.",
+    "cmd": "grep -oE '^([0-9]{1,3}\\.){3}[0-9]{1,3}' data/web_access.log | sort | uniq -c | sort -nr"
+  },
+  {
+    "n": 22,
+    "section": "grep",
+    "title": "Extract key=value pairs",
+    "task": "Extract all `name=value` fragments from the application log.",
+    "cmd": "grep -oE '[A-Za-z_]+=[^ ]+' data/app.log"
+  },
+  {
+    "n": 23,
+    "section": "grep",
+    "title": "Locate blank lines",
+    "task": "Show the line numbers of blank lines in `multiline.txt`.",
+    "cmd": "grep -n '^$' mixed/multiline.txt"
+  },
+  {
+    "n": 24,
+    "section": "grep",
+    "title": "Remove blank lines",
+    "task": "Display only nonblank lines from `multiline.txt`.",
+    "cmd": "grep -v '^$' mixed/multiline.txt"
+  },
+  {
+    "n": 25,
+    "section": "grep",
+    "title": "Search selected file extensions",
+    "task": "Search only Markdown files for TODO or FIXME markers.",
+    "cmd": "grep -RInE --include='*.md' 'TODO|FIXME' projects"
+  },
+  {
+    "n": 26,
+    "section": "grep",
+    "title": "Exclude an archive directory",
+    "task": "Search Python files for `print` but skip `projects/archive`.",
+    "cmd": "grep -RIn --include='*.py' --exclude-dir='archive' 'print' projects"
+  },
+  {
+    "n": 27,
+    "section": "grep",
+    "title": "Use a fixed-string search",
+    "task": "Search literally for `division by zero` in the project tree.",
+    "cmd": "grep -RFn 'division by zero' projects"
+  },
+  {
+    "n": 28,
+    "section": "grep",
+    "title": "Match an exact configuration line",
+    "task": "Find a line that is exactly `DEBUG=false`.",
+    "cmd": "grep -x 'DEBUG=false' projects/beta/config/app.conf"
+  },
+  {
+    "n": 29,
+    "section": "grep",
+    "title": "Find server-error requests",
+    "task": "Display web requests that returned an HTTP 5xx status.",
+    "cmd": "grep -E '\" 5[0-9]{2} ' data/web_access.log"
+  },
+  {
+    "n": 30,
+    "section": "grep",
+    "title": "Extract error and fatal messages",
+    "task": "Print only the message text after `ERROR` or `FATAL` in `app.log`.",
+    "cmd": "grep -E ' (ERROR|FATAL) ' data/app.log | sed -E 's/^.* (ERROR|FATAL) +//'"
+  },
+  {
+    "n": 31,
+    "section": "awk",
+    "title": "Print selected CSV fields",
+    "task": "Print each employee name followed by the department.",
+    "cmd": "awk -F, 'NR>1 {print $2, $3}' data/employees.csv"
+  },
+  {
+    "n": 32,
+    "section": "awk",
+    "title": "Use a custom output separator",
+    "task": "Print employee name, role, and city separated by ` | `.",
+    "cmd": "awk -F, 'BEGIN{OFS=\" | \"} NR>1 {print $2,$4,$6}' data/employees.csv"
+  },
+  {
+    "n": 33,
+    "section": "awk",
+    "title": "Filter high salaries",
+    "task": "Print names and salaries of employees earning more than 80,000.",
+    "cmd": "awk -F, 'NR>1 && $5>80000 {print $2, $5}' data/employees.csv"
+  },
+  {
+    "n": 34,
+    "section": "awk",
+    "title": "Combine multiple conditions",
+    "task": "Find active Engineering employees located in Kolkata.",
+    "cmd": "awk -F, 'NR>1 && $3==\"Engineering\" && $6==\"Kolkata\" && $8==\"active\" {print $2,$4}' data/employees.csv"
+  },
+  {
+    "n": 35,
+    "section": "awk",
+    "title": "Count employees by status",
+    "task": "Count active and inactive employees.",
+    "cmd": "awk -F, 'NR>1 {count[$8]++} END{for (s in count) print s, count[s]}' data/employees.csv | sort"
+  },
+  {
+    "n": 36,
+    "section": "awk",
+    "title": "Calculate total payroll",
+    "task": "Calculate the sum of all employee salaries.",
+    "cmd": "awk -F, 'NR>1 {sum+=$5} END{print sum}' data/employees.csv"
+  },
+  {
+    "n": 37,
+    "section": "awk",
+    "title": "Calculate average salary",
+    "task": "Calculate the average employee salary.",
+    "cmd": "awk -F, 'NR>1 {sum+=$5; n++} END{printf \"%.2f\\n\", sum/n}' data/employees.csv"
+  },
+  {
+    "n": 38,
+    "section": "awk",
+    "title": "Find the minimum salary",
+    "task": "Print the employee with the lowest salary.",
+    "cmd": "awk -F, 'NR==2 {min=$5; name=$2} NR>2 && $5<min {min=$5; name=$2} END{print name,min}' data/employees.csv"
+  },
+  {
+    "n": 39,
+    "section": "awk",
+    "title": "Find the maximum salary",
+    "task": "Print the employee with the highest salary.",
+    "cmd": "awk -F, 'NR==2 {max=$5; name=$2} NR>2 && $5>max {max=$5; name=$2} END{print name,max}' data/employees.csv"
+  },
+  {
+    "n": 40,
+    "section": "awk",
+    "title": "Count employees per department",
+    "task": "Print a department-wise employee count.",
+    "cmd": "awk -F, 'NR>1 {count[$3]++} END{for (d in count) print d,count[d]}' data/employees.csv | sort"
+  },
+  {
+    "n": 41,
+    "section": "awk",
+    "title": "Average salary per department",
+    "task": "Calculate average salary for each department.",
+    "cmd": "awk -F, 'NR>1 {sum[$3]+=$5; count[$3]++} END{for (d in sum) printf \"%s %.2f\\n\",d,sum[d]/count[d]}' data/employees.csv | sort"
+  },
+  {
+    "n": 42,
+    "section": "awk",
+    "title": "Payroll by city",
+    "task": "Calculate total salary paid in each city.",
+    "cmd": "awk -F, 'NR>1 {pay[$6]+=$5} END{for (c in pay) print c,pay[c]}' data/employees.csv | sort"
+  },
+  {
+    "n": 43,
+    "section": "awk",
+    "title": "Calculate each sale amount",
+    "task": "Print sale ID, product, and `quantity \u00d7 unit_price`.",
+    "cmd": "awk -F, 'BEGIN{OFS=\",\"} NR>1 {print $1,$5,$6*$7}' data/sales.csv"
+  },
+  {
+    "n": 44,
+    "section": "awk",
+    "title": "Calculate total sales revenue",
+    "task": "Calculate revenue across every sales record.",
+    "cmd": "awk -F, 'NR>1 {total+=$6*$7} END{print total}' data/sales.csv"
+  },
+  {
+    "n": 45,
+    "section": "awk",
+    "title": "Revenue by region",
+    "task": "Calculate total sales revenue for each region.",
+    "cmd": "awk -F, 'NR>1 {rev[$3]+=$6*$7} END{for (r in rev) print r,rev[r]}' data/sales.csv | sort"
+  },
+  {
+    "n": 46,
+    "section": "awk",
+    "title": "Highest-value sale",
+    "task": "Print the sale ID and value of the largest single sales transaction.",
+    "cmd": "awk -F, 'NR>1 {v=$6*$7; if(v>max){max=v; id=$1; product=$5}} END{print id,product,max}' data/sales.csv"
+  },
+  {
+    "n": 47,
+    "section": "awk",
+    "title": "Quantity sold by product",
+    "task": "Calculate the total quantity sold for every product.",
+    "cmd": "awk -F, 'NR>1 {qty[$5]+=$6} END{for (p in qty) print p,qty[p]}' data/sales.csv | sort"
+  },
+  {
+    "n": 48,
+    "section": "awk",
+    "title": "Student average marks",
+    "task": "Print each student and the average of math, science, and English.",
+    "cmd": "awk -F, 'NR>1 {printf \"%-10s %.2f\\n\",$2,($4+$5+$6)/3}' data/students.csv"
+  },
+  {
+    "n": 49,
+    "section": "awk",
+    "title": "Assign pass or fail",
+    "task": "Mark a student PASS when the three-subject average is at least 60.",
+    "cmd": "awk -F, 'NR>1 {avg=($4+$5+$6)/3; print $2,(avg>=60?\"PASS\":\"FAIL\")}' data/students.csv"
+  },
+  {
+    "n": 50,
+    "section": "awk",
+    "title": "Find the top student",
+    "task": "Print the student with the highest three-subject average.",
+    "cmd": "awk -F, 'NR>1 {avg=($4+$5+$6)/3; if(avg>max){max=avg; name=$2}} END{printf \"%s %.2f\\n\",name,max}' data/students.csv"
+  },
+  {
+    "n": 51,
+    "section": "awk",
+    "title": "Count students by major",
+    "task": "Print how many students belong to each major.",
+    "cmd": "awk -F, 'NR>1 {count[$3]++} END{for (m in count) print m,count[m]}' data/students.csv | sort"
+  },
+  {
+    "n": 52,
+    "section": "awk",
+    "title": "Find out-of-stock items",
+    "task": "Print inventory items whose stock is zero.",
+    "cmd": "awk -F '\\t' 'NR>1 && $4==0 {print $1,$2}' data/inventory.tsv"
+  },
+  {
+    "n": 53,
+    "section": "awk",
+    "title": "Inventory value per item",
+    "task": "Print each item and its stock value (`stock \u00d7 price`).",
+    "cmd": "awk -F '\\t' 'BEGIN{OFS=\" | \"} NR>1 {print $2,$4*$5}' data/inventory.tsv"
+  },
+  {
+    "n": 54,
+    "section": "awk",
+    "title": "Inventory value by category",
+    "task": "Calculate total inventory value for each category.",
+    "cmd": "awk -F '\\t' 'NR>1 {value[$3]+=$4*$5} END{for (c in value) print c,value[c]}' data/inventory.tsv | sort"
+  },
+  {
+    "n": 55,
+    "section": "awk",
+    "title": "Users with Bash shells",
+    "task": "Print usernames whose login shell is `/bin/bash`.",
+    "cmd": "awk -F: '$7==\"/bin/bash\" {print $1}' data/users.txt"
+  },
+  {
+    "n": 56,
+    "section": "awk",
+    "title": "Format username and home directory",
+    "task": "Print `username -> home_directory` for every user.",
+    "cmd": "awk -F: '{print $1 \" -> \" $6}' data/users.txt"
+  },
+  {
+    "n": 57,
+    "section": "awk",
+    "title": "Count HTTP status codes",
+    "task": "Create a count of each response status in the access log.",
+    "cmd": "awk '{count[$9]++} END{for (s in count) print s,count[s]}' data/web_access.log | sort -n"
+  },
+  {
+    "n": 58,
+    "section": "awk",
+    "title": "Sum bytes by HTTP status",
+    "task": "Calculate total response bytes sent for every HTTP status.",
+    "cmd": "awk '{bytes[$9]+=$10} END{for (s in bytes) print s,bytes[s]}' data/web_access.log | sort -n"
+  },
+  {
+    "n": 59,
+    "section": "awk",
+    "title": "Find the most active IP",
+    "task": "Print the IP address that made the most requests.",
+    "cmd": "awk '{count[$1]++} END{for (ip in count) if(count[ip]>max){max=count[ip]; top=ip} print top,max}' data/web_access.log"
+  },
+  {
+    "n": 60,
+    "section": "awk",
+    "title": "Count application log levels",
+    "task": "Count INFO, DEBUG, WARN, ERROR, and FATAL entries.",
+    "cmd": "awk '{count[$3]++} END{for (level in count) print level,count[level]}' data/app.log | sort"
+  },
+  {
+    "n": 61,
+    "section": "find",
+    "title": "List every regular file",
+    "task": "List all regular files under the lab directory.",
+    "cmd": "find data logs projects backups temp permissions mixed reports -type f | sort"
+  },
+  {
+    "n": 62,
+    "section": "find",
+    "title": "List every directory",
+    "task": "List all directories under `projects`.",
+    "cmd": "find projects -type d | sort"
+  },
+  {
+    "n": 63,
+    "section": "find",
+    "title": "Find lowercase .log files",
+    "task": "Find files whose names end in lowercase `.log`.",
+    "cmd": "find data logs projects backups temp permissions mixed reports -type f -name '*.log' | sort"
+  },
+  {
+    "n": 64,
+    "section": "find",
+    "title": "Case-insensitive text files",
+    "task": "Find `.txt` files regardless of extension case.",
+    "cmd": "find data logs projects backups temp permissions mixed reports -type f -iname '*.txt' | sort"
+  },
+  {
+    "n": 65,
+    "section": "find",
+    "title": "Find names containing spaces",
+    "task": "Find filesystem entries whose names contain a space.",
+    "cmd": "find data logs projects backups temp permissions mixed reports -name '* *' | sort"
+  },
+  {
+    "n": 66,
+    "section": "find",
+    "title": "Find empty files",
+    "task": "List all zero-byte regular files.",
+    "cmd": "find data logs projects backups temp permissions mixed reports -type f -empty | sort"
+  },
+  {
+    "n": 67,
+    "section": "find",
+    "title": "Find empty directories",
+    "task": "List directories containing no entries.",
+    "cmd": "find data logs projects backups temp permissions mixed reports -type d -empty | sort"
+  },
+  {
+    "n": 68,
+    "section": "find",
+    "title": "Find files larger than 5 KiB",
+    "task": "List regular files larger than 5 KiB.",
+    "cmd": "find data logs projects backups temp permissions mixed reports -type f -size +5k | sort"
+  },
+  {
+    "n": 69,
+    "section": "find",
+    "title": "Find files from 1 to 5 KiB",
+    "task": "List files at least roughly 1 KiB but no larger than 5 KiB.",
+    "cmd": "find data logs projects backups temp permissions mixed reports -type f -size +1k -size -5k | sort"
+  },
+  {
+    "n": 70,
+    "section": "find",
+    "title": "Find executable files",
+    "task": "List regular files executable by at least one user class.",
+    "cmd": "find projects permissions -type f -executable | sort"
+  },
+  {
+    "n": 71,
+    "section": "find",
+    "title": "Find files with exact mode 600",
+    "task": "Find regular files whose permission bits are exactly `600`.",
+    "cmd": "find data logs projects backups temp permissions mixed reports -type f -perm 600 | sort"
+  },
+  {
+    "n": 72,
+    "section": "find",
+    "title": "Find files older than one year",
+    "task": "Find archived files modified more than 365 days ago.",
+    "cmd": "find projects/archive -type f -mtime +365 -print | sort"
+  },
+  {
+    "n": 73,
+    "section": "find",
+    "title": "Find files newer than a reference",
+    "task": "Find files in the January log directory newer than `server1.log`.",
+    "cmd": "find logs/2026/january -type f -newer logs/2026/january/server1.log -print | sort"
+  },
+  {
+    "n": 74,
+    "section": "find",
+    "title": "Find files older than a reference",
+    "task": "Find log files older than January\u2019s `server1.log`.",
+    "cmd": "find logs -type f ! -newer logs/2026/january/server1.log -print | sort"
+  },
+  {
+    "n": 75,
+    "section": "find",
+    "title": "Limit search depth",
+    "task": "List regular files no deeper than two levels below the current directory.",
+    "cmd": "find . -maxdepth 2 -type f | sort"
+  },
+  {
+    "n": 76,
+    "section": "find",
+    "title": "Require a minimum depth",
+    "task": "List project files located at depth 3 or deeper.",
+    "cmd": "find projects -mindepth 3 -type f | sort"
+  },
+  {
+    "n": 77,
+    "section": "find",
+    "title": "Prune an archive directory",
+    "task": "Find Python files under `projects` without descending into `projects/archive`.",
+    "cmd": "find projects -path 'projects/archive' -prune -o -type f -name '*.py' -print | sort"
+  },
+  {
+    "n": 78,
+    "section": "find",
+    "title": "Match multiple extensions",
+    "task": "Find regular files ending in `.py` or `.sh`.",
+    "cmd": "find projects permissions -type f \\( -name '*.py' -o -name '*.sh' \\) | sort"
+  },
+  {
+    "n": 79,
+    "section": "find",
+    "title": "Find files owned by the current user",
+    "task": "List regular files owned by your current username.",
+    "cmd": "find data logs projects backups temp permissions mixed reports -type f -user \"$(id -un)\" | sort"
+  },
+  {
+    "n": 80,
+    "section": "find",
+    "title": "Find symbolic links",
+    "task": "List all symbolic links, whether valid or broken.",
+    "cmd": "find data logs projects backups temp permissions mixed reports -type l | sort"
+  },
+  {
+    "n": 81,
+    "section": "find",
+    "title": "Find broken symbolic links",
+    "task": "List symbolic links whose targets do not exist.",
+    "cmd": "find data logs projects backups temp permissions mixed reports -xtype l | sort"
+  },
+  {
+    "n": 82,
+    "section": "find",
+    "title": "Run wc on found files",
+    "task": "Count lines in every `.log` file under `logs`.",
+    "cmd": "find logs -type f -name '*.log' -exec wc -l {} +"
+  },
+  {
+    "n": 83,
+    "section": "find",
+    "title": "Run grep on found files",
+    "task": "Find TODO or FIXME markers in project Markdown files.",
+    "cmd": "find projects -type f -name '*.md' -exec grep -HnE 'TODO|FIXME' {} +"
+  },
+  {
+    "n": 84,
+    "section": "find",
+    "title": "Print size and path",
+    "task": "Print each backup file\u2019s byte size followed by its path.",
+    "cmd": "find backups -type f -printf '%s %p\\n' | sort -n"
+  },
+  {
+    "n": 85,
+    "section": "find",
+    "title": "Rank files by size",
+    "task": "Display the five largest regular files in the lab.",
+    "cmd": "find data logs projects backups temp permissions mixed reports -type f -printf '%s %p\\n' | sort -nr | head -n 5"
+  },
+  {
+    "n": 86,
+    "section": "find",
+    "title": "Find the newest file",
+    "task": "Print the most recently modified regular file.",
+    "cmd": "find logs -type f -printf '%T@ %p\\n' | sort -nr | head -n 1"
+  },
+  {
+    "n": 87,
+    "section": "find",
+    "title": "Print only basenames",
+    "task": "Print only the basenames of Python files.",
+    "cmd": "find projects -type f -name '*.py' -exec basename {} \\; | sort"
+  },
+  {
+    "n": 88,
+    "section": "find",
+    "title": "Safely find leading-dash names",
+    "task": "Find files whose basename begins with `-`.",
+    "cmd": "find mixed -type f -name '-*' -print"
+  },
+  {
+    "n": 89,
+    "section": "find",
+    "title": "Find files not ending in .log",
+    "task": "List regular files under `logs` whose names do not end in `.log`.",
+    "cmd": "find logs -type f ! -name '*.log' | sort"
+  },
+  {
+    "n": 90,
+    "section": "find",
+    "title": "Find world-writable files",
+    "task": "List regular files writable by \u201cothers.\u201d",
+    "cmd": "find data logs projects backups temp permissions mixed reports -type f -perm -002 -print | sort"
+  },
+  {
+    "n": 91,
+    "section": "Unix utilities",
+    "title": "Count lines, words, and bytes",
+    "task": "Show line, word, and byte counts for `employees.csv`.",
+    "cmd": "wc data/employees.csv"
+  },
+  {
+    "n": 92,
+    "section": "Unix utilities",
+    "title": "Preview the beginning of a file",
+    "task": "Display the header and first three employee records.",
+    "cmd": "head -n 4 data/employees.csv"
+  },
+  {
+    "n": 93,
+    "section": "Unix utilities",
+    "title": "Preview the end of a file",
+    "task": "Display the final five sales records.",
+    "cmd": "tail -n 5 data/sales.csv"
+  },
+  {
+    "n": 94,
+    "section": "Unix utilities",
+    "title": "Extract CSV columns with cut",
+    "task": "Print employee name and department columns.",
+    "cmd": "cut -d, -f2,3 data/employees.csv"
+  },
+  {
+    "n": 95,
+    "section": "Unix utilities",
+    "title": "Extract passwd-style fields",
+    "task": "Print username and shell from `users.txt`.",
+    "cmd": "cut -d: -f1,7 data/users.txt"
+  },
+  {
+    "n": 96,
+    "section": "Unix utilities",
+    "title": "Sort words alphabetically",
+    "task": "Sort `words.txt` using bytewise ordering.",
+    "cmd": "LC_ALL=C sort data/words.txt"
+  },
+  {
+    "n": 97,
+    "section": "Unix utilities",
+    "title": "Create a case-insensitive unique list",
+    "task": "Print unique words while treating uppercase and lowercase forms as equal.",
+    "cmd": "sort -f data/words.txt | uniq -i"
+  },
+  {
+    "n": 98,
+    "section": "Unix utilities",
+    "title": "Count word frequencies",
+    "task": "Count each word ignoring case and rank by frequency.",
+    "cmd": "tr '[:upper:]' '[:lower:]' < data/words.txt | sort | uniq -c | sort -nr"
+  },
+  {
+    "n": 99,
+    "section": "Unix utilities",
+    "title": "Numerically sort salaries",
+    "task": "Display the five highest-paid employee records.",
+    "cmd": "{ head -n 1 data/employees.csv; tail -n +2 data/employees.csv | sort -t, -k5,5nr | head -n 5; }"
+  },
+  {
+    "n": 100,
+    "section": "Unix utilities",
+    "title": "Sort by two keys",
+    "task": "Sort employees by department, then by descending salary.",
+    "cmd": "{ head -n 1 data/employees.csv; tail -n +2 data/employees.csv | sort -t, -k3,3 -k5,5nr; }"
+  },
+  {
+    "n": 101,
+    "section": "Unix utilities",
+    "title": "Convert text to uppercase",
+    "task": "Convert every name to uppercase.",
+    "cmd": "tr '[:lower:]' '[:upper:]' < data/names.txt"
+  },
+  {
+    "n": 102,
+    "section": "Unix utilities",
+    "title": "Squeeze repeated spaces",
+    "task": "Collapse repeated spaces in the application log to one space.",
+    "cmd": "tr -s ' ' < data/app.log"
+  },
+  {
+    "n": 103,
+    "section": "Unix utilities",
+    "title": "Combine files side by side",
+    "task": "Pair each name with a department using a tab separator.",
+    "cmd": "paste data/names.txt data/departments.txt"
+  },
+  {
+    "n": 104,
+    "section": "Unix utilities",
+    "title": "Join related tables",
+    "task": "Attach department codes to employee rows.",
+    "cmd": "join -t, -1 3 -2 1 <(tail -n +2 data/employees.csv | sort -t, -k3,3) <(tail -n +2 data/dept_codes.csv | sort -t, -k1,1) | head"
+  },
+  {
+    "n": 105,
+    "section": "Unix utilities",
+    "title": "Compare two sorted sets",
+    "task": "Show names that are employees but never appear as salespeople.",
+    "cmd": "comm -23 <(tail -n +2 data/employees.csv | cut -d, -f2 | sort -u) <(tail -n +2 data/sales.csv | cut -d, -f4 | sort -u)"
+  },
+  {
+    "n": 106,
+    "section": "Unix utilities",
+    "title": "Replace text with sed",
+    "task": "Display `app.log` with `INFO` changed to `INFORMATION`.",
+    "cmd": "sed 's/INFO/INFORMATION/g' data/app.log"
+  },
+  {
+    "n": 107,
+    "section": "Unix utilities",
+    "title": "Delete blank lines with sed",
+    "task": "Display `multiline.txt` without blank lines.",
+    "cmd": "sed '/^$/d' mixed/multiline.txt"
+  },
+  {
+    "n": 108,
+    "section": "Unix utilities",
+    "title": "Print a line range with sed",
+    "task": "Display lines 3 through 6 from `app.log`.",
+    "cmd": "sed -n '3,6p' data/app.log"
+  },
+  {
+    "n": 109,
+    "section": "Unix utilities",
+    "title": "Extract a configuration value",
+    "task": "Print only the value assigned to `PORT`.",
+    "cmd": "sed -n 's/^PORT=//p' projects/beta/config/app.conf"
+  },
+  {
+    "n": 110,
+    "section": "Unix utilities",
+    "title": "Save and display output with tee",
+    "task": "Display severe log entries and save them to `workspace/severe.log`.",
+    "cmd": "grep -E 'ERROR|FATAL' data/app.log | tee workspace/severe.log"
+  },
+  {
+    "n": 111,
+    "section": "Unix utilities",
+    "title": "Use xargs to count lines",
+    "task": "Count lines in every project Markdown file.",
+    "cmd": "find projects -type f -name '*.md' -print0 | xargs -0 wc -l"
+  },
+  {
+    "n": 112,
+    "section": "Unix utilities",
+    "title": "Use xargs with grep safely",
+    "task": "Search every log file for ERROR using null-delimited paths.",
+    "cmd": "find logs -type f -name '*.log' -print0 | xargs -0 grep -H 'ERROR'"
+  },
+  {
+    "n": 113,
+    "section": "Unix utilities",
+    "title": "Number every line",
+    "task": "Display `paragraphs.txt` with line numbers.",
+    "cmd": "nl -ba data/paragraphs.txt"
+  },
+  {
+    "n": 114,
+    "section": "Unix utilities",
+    "title": "Reverse line order",
+    "task": "Display the application log from last line to first.",
+    "cmd": "tac data/app.log"
+  },
+  {
+    "n": 115,
+    "section": "Unix utilities",
+    "title": "Reverse characters",
+    "task": "Reverse the characters of each line in `names.txt`.",
+    "cmd": "rev data/names.txt"
+  },
+  {
+    "n": 116,
+    "section": "Unix utilities",
+    "title": "Verify duplicate contents",
+    "task": "Calculate checksums for the suspected duplicate files.",
+    "cmd": "cksum temp/duplicate_a.txt temp/duplicate_b.txt temp/unique.txt"
+  },
+  {
+    "n": 117,
+    "section": "Unix utilities",
+    "title": "Compare files byte by byte",
+    "task": "Verify whether the two duplicate files are identical.",
+    "cmd": "cmp -s temp/duplicate_a.txt temp/duplicate_b.txt && echo 'identical' || echo 'different'"
+  },
+  {
+    "n": 118,
+    "section": "Unix utilities",
+    "title": "Show differences between reports",
+    "task": "Compare January and February reports in unified format.",
+    "cmd": "diff -u reports/report_jan.txt reports/report_feb.txt || true"
+  },
+  {
+    "n": 119,
+    "section": "Unix utilities",
+    "title": "Inspect disk usage",
+    "task": "Display the total apparent disk space used by each top-level practice directory.",
+    "cmd": "du -sh data logs projects backups temp permissions mixed reports 2>/dev/null | sort -h"
+  },
+  {
+    "n": 120,
+    "section": "Unix utilities",
+    "title": "Build a top-IP pipeline",
+    "task": "Print the three most active IP addresses and request counts.",
+    "cmd": "cut -d' ' -f1 data/web_access.log | sort | uniq -c | sort -nr | head -n 3"
+  }
+]

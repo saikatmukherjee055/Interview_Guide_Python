@@ -1,0 +1,7 @@
+Total exercises: 120
+All solution commands executed successfully.
+Sections:
+- grep: 30
+- awk: 30
+- find: 30
+- Unix utilities: 30
